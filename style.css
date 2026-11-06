@@ -1,0 +1,49 @@
+:root {
+  --bg-dark: #121212;
+  --text-light: #e0e0e0;
+  --soft-gold: #d4af37;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(212, 175, 55, 0.3);
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Glassmorphism Container */
+.glass-container {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-container:hover {
+  transform: translateY(-2px);
+  border-color: var(--soft-gold);
+}
+
+/* Tombol Aksen Soft Gold */
+.btn-gold {
+  background-color: transparent;
+  color: var(--soft-gold);
+  border: 1px solid var(--soft-gold);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: var(--soft-gold);
+  color: var(--bg-dark);
+}
